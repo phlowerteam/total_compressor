@@ -56,7 +56,7 @@ module TotalCompressor
       Tool (wrapper) for compression and handling multiple type of archives.
 
       Usage: tcomp [<key>] path
-        <key> - determine supported type of compression:
+        <key> - determines supported type of compression:
           z - use Zip
           g - use GZip (can't compress folder, only file)
           r - use RAR
