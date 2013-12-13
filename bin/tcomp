@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'total_compressor'
+
+TotalCompressor.cmdline

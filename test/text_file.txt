@@ -1,0 +1,409 @@
+Ruby is a dynamic, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+Ruby embodies syntax inspired by Perl with Smalltalk-like features and was also influenced by Eiffel and Lisp.[9] It supports multiple programming paradigms, including functional, object oriented, and imperative. It also has a dynamic type system and automatic memory management. Therefore, it is similar in varying degrees to Smalltalk, Python, Perl, Lisp, Dylan, and CLU.
+The standard and already retired[10] 1.8.7 implementation was written in C, as a single-pass interpreted language. Starting with the 1.9 branch, and continuing with the current 2.0 branch, YARV has been used, and will eventually supersede the slower Ruby MRI. The language specifications for Ruby were developed by the Open Standards Promotion Center of the Information-Technology Promotion Agency (a Japanese government agency) for submission to the Japanese Industrial Standards Committee and then to the International Organization for Standardization. It was accepted as a Japanese Industrial Standard (JIS X 3017) in 2011[11] and an international standard (ISO/IEC 30170) in 2012.[12] As of 2010, there are a number of complete or upcoming alternative implementations of Ruby, including YARV, JRuby, Rubinius, IronRuby, MacRuby (and its iOS counterpart, RubyMotion), mruby, HotRuby, Topaz and Opal. Each takes a different approach, with IronRuby, JRuby, MacRuby and Rubinius providing just-in-time compilation and MacRuby and mruby also providing ahead-of-time compilation.
+
+History[edit]
+
+Ruby was conceived on February 24, 1993 by Yukihiro Matsumoto who wished to create a new language that balanced functional programming with imperative programming.[13] Matsumoto has said, "I wanted a scripting language that was more powerful than Perl, and more object-oriented than Python. That's why I decided to design my own language."[14]
+At a Google Tech Talk in 2008 Matsumoto further stated, "I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language."[15]
+Choice of the name "Ruby"[edit]
+The name "Ruby" originated during an online chat session between Matsumoto and Keiju Ishitsuka on February 24, 1993, before any code had been written for the language.[16] Initially two names were proposed: "Coral" and "Ruby". Matsumoto chose the latter in a later e-mail to Ishitsuka.[17] Matsumoto later noted a factor in choosing the name "Ruby" – it was the birthstone of one of his colleagues.[18][19]
+First publication[edit]
+The first public release of Ruby 0.95 was announced on Japanese domestic newsgroups on December 21, 1995.[20][21] Subsequently three more versions of Ruby were released in two days.[16] The release coincided with the launch of the Japanese-language ruby-list mailing list, which was the first mailing list for the new language.
+Already present at this stage of development were many of the features familiar in later releases of Ruby, including object-oriented design, classes with inheritance, mixins, iterators, closures, exception handling and garbage collection.[22]
+Ruby 1.0[edit]
+Ruby reached version 1.0 on December 25, 1996.[16]
+Following the release of Ruby 1.3 in 1999 the first English language mailing list ruby-talk began,[14] which signalled a growing interest in the language outside of Japan. In September 2000, the first English language book Programming Ruby was printed, which was later freely released to the public, further widening the adoption of Ruby amongst English speakers.
+[icon]	This section requires expansion with: history and new features for pre-1.9 versions. (May 2012)
+Ruby 1.2[edit]
+Ruby 1.2 was initially released in December 1998.
+Ruby 1.4[edit]
+Ruby 1.4 was initially released in August 1999.
+Ruby 1.6[edit]
+Ruby 1.6 was initially released in September 2000.
+Ruby 1.8[edit]
+Ruby 1.8 was initially released in August 2003, was stable for a long time, and was retired June 2013.[10] Although deprecated, there is still code based on it. Ruby 1.8 is incompatible with Ruby 1.9.
+Ruby on Rails[edit]
+Around 2005, interest in the Ruby language surged in tandem with Ruby on Rails, a popular web application framework written in Ruby. Rails is frequently credited with making Ruby "famous".[23]
+Ruby 1.9[edit]
+Ruby 1.9 was released in December 2007. Effective with Ruby 1.9.3, released October 31, 2011,[24] Ruby switched from being dual-licensed under the Ruby License and the GPL to being dual-licensed under the Ruby License and the two-clause BSD license.[25] Adoption of 1.9 was slowed by changes from 1.8 which required many popular third party gems to be rewritten.
+Ruby 1.9 introduces many significant changes over the 1.8 series.[26] Examples:
+block local variables (variables that are local to the block in which they are declared)
+an additional lambda syntax: f = ->(a,b) { puts a + b }
+per-string character encodings are supported
+new socket API (IPv6 support)
+require_relative import security
+Ruby 2.0[edit]
+Ruby 2.0 added several new features, including:
+method keyword arguments,
+a new method, Module#prepend, for extending a class,
+a new literal for creating an array of symbols,
+new API for the lazy evaluation of Enumerables, and
+a new convention of using #to_h to convert objects to Hashes.[27]
+Ruby 2.0 is intended to be fully backward compatible with Ruby 1.9.3. As of the official 2.0.0 release on February 24, 2013, there were only five known (minor) incompatibilities.[28]
+Philosophy[edit]
+
+Matsumoto has said that Ruby is designed for programmer productivity and fun, following the principles of good user interface design.[29] He stresses that systems design needs to emphasize human, rather than computer, needs:[30]
+Often people, especially computer engineers, focus on the machines. They think, "By doing this, the machine will run faster. By doing this, the machine will run more effectively. By doing this, the machine will something something something." They are focusing on machines. But in fact we need to focus on humans, on how humans care about doing programming or operating the application of the machines. We are the masters. They are the slaves.
+Ruby is said to follow the principle of least astonishment (POLA), meaning that the language should behave in such a way as to minimize confusion for experienced users. Matsumoto has said his primary design goal was to make a language which he himself enjoyed using, by minimizing programmer work and possible confusion. He has said that he had not applied the principle of least surprise to the design of Ruby,[30] but nevertheless the phrase has come to be closely associated with the Ruby programming language. The phrase has itself been a source of surprise, as novice users may take it to mean that Ruby's behaviors try to closely match behaviors familiar from other languages. In a May 2005 discussion on the newsgroup comp.lang.ruby, Matsumoto attempted to distance Ruby from POLA, explaining that because any design choice will be surprising to someone, he uses a personal standard in evaluating surprise. If that personal standard remains consistent, there would be few surprises for those familiar with the standard.[31]
+Matsumoto defined it this way in an interview:[30]
+Everyone has an individual background. Someone may come from Python, someone else may come from Perl, and they may be surprised by different aspects of the language. Then they come up to me and say, 'I was surprised by this feature of the language, so Ruby violates the principle of least surprise.' Wait. Wait. The principle of least surprise is not for you only. The principle of least surprise means principle of least my surprise. And it means the principle of least surprise after you learn Ruby very well. For example, I was a C++ programmer before I started designing Ruby. I programmed in C++ exclusively for two or three years. And after two years of C++ programming, it still surprises me.
+Features[edit]
+
+Thoroughly object-oriented with inheritance, mixins and metaclasses[32]
+Dynamic typing and duck typing
+Everything is an expression (even statements) and everything is executed imperatively (even declarations)
+Succinct and flexible syntax[33] that minimizes syntactic noise and serves as a foundation for domain-specific languages[34]
+Dynamic reflection and alteration of objects to facilitate metaprogramming[35]
+Lexical closures, iterators and generators, with a unique block syntax[36]
+Literal notation for arrays, hashes, regular expressions and symbols
+Embedding code in strings (interpolation)
+Default arguments
+Four levels of variable scope (global, class, instance, and local) denoted by sigils or the lack thereof
+Garbage collection
+First-class continuations
+Strict boolean coercion rules (everything is true except false and nil)
+Exception handling
+Operator overloading
+Built-in support for rational numbers, complex numbers and arbitrary-precision arithmetic
+Custom dispatch behavior (through method_missing and const_missing)
+Native threads and cooperative fibers (fibers are 1.9/YARV feature)
+Initial support for Unicode and multiple character encodings (no ICU support)[37]
+Native plug-in API in C
+Interactive Ruby Shell (a REPL)
+Centralized package management through RubyGems
+Implemented on all major platforms
+Large standard library, including modules for YAML, JSON, XML, CGI, OpenSSL, HTTP, FTP, RSS, curses, zlib, and Tk[38]
+Semantics[edit]
+
+Ruby is object-oriented: every value is an object, including classes and instances of types that many other languages designate as primitives (such as integers, booleans, and "null"). Variables always hold references to objects. Every function is a method and methods are always called on an object. Methods defined at the top level scope become members of the Object class. Since this class is an ancestor of every other class, such methods can be called on any object. They are also visible in all scopes, effectively serving as "global" procedures. Ruby supports inheritance with dynamic dispatch, mixins and singleton methods (belonging to, and defined for, a single instance rather than being defined on the class). Though Ruby does not support multiple inheritance, classes can import modules as mixins.
+Ruby has been described as a multi-paradigm programming language: it allows procedural programming (defining functions/variables outside classes makes them part of the root, 'self' Object), with object orientation (everything is an object) or functional programming (it has anonymous functions, closures, and continuations; statements all have values, and functions return the last evaluation). It has support for introspection, reflection and metaprogramming, as well as support for interpreter-based[39] threads. Ruby features dynamic typing, and supports parametric polymorphism.
+According to the Ruby FAQ,[40] "If you like Perl, you will like Ruby and be right at home with its syntax. If you like Smalltalk, you will like Ruby and be right at home with its semantics. If you like Python, you may or may not be put off by the huge difference in design philosophy between Python and Ruby/Perl."
+Syntax[edit]
+
+The syntax of Ruby is broadly similar to that of Perl and Python. Class and method definitions are signaled by keywords. In contrast to Perl, variables are not obligatorily prefixed with a sigil. When used, the sigil changes the semantics of scope of the variable. One difference from C and Perl is that keywords are typically used to define logical code blocks, without braces (i.e., pair of { and }). For practical purposes there is no distinction between expressions and statements.[41] Line breaks are significant and taken as the end of a statement; a semicolon may be equivalently used. Unlike Python, indentation is not significant.
+One of the differences of Ruby compared to Python and Perl is that Ruby keeps all of its instance variables completely private to the class and only exposes them through accessor methods (attr_writer, attr_reader, etc.). Unlike the "getter" and "setter" methods of other languages like C++ or Java, accessor methods in Ruby can be created with a single line of code via metaprogramming; however, accessor methods can also be created in the traditional fashion of C++ and Java. As invocation of these methods does not require the use of parentheses, it is trivial to change an instance variable into a full function, without modifying a single line of code or having to do any refactoring achieving similar functionality to C# and VB.NET property members.
+Python's property descriptors are similar, but come with a tradeoff in the development process. If one begins in Python by using a publicly exposed instance variable, and later changes the implementation to use a private instance variable exposed through a property descriptor, code internal to the class may need to be adjusted to use the private variable rather than the public property. Ruby’s design forces all instance variables to be private, but also provides a simple way to declare set and get methods. This is in keeping with the idea that in Ruby, one never directly accesses the internal members of a class from outside of it; rather, one passes a message to the class and receives a response.
+See the Examples section below for samples of code demonstrating Ruby syntax.
+Deviations from behavior elsewhere[edit]
+
+Some features which differ notably from languages such as C or Perl:
+The language syntax is sensitive to the capitalization of identifiers, in all cases treating capitalized variables as constants. Class and module names are constants and refer to objects derived from Class and Module.
+The sigils $ and @ do not indicate variable data type as in Perl, but rather function as scope resolution operators.
+Floating point literals must have digits both side of the decimal point: neither .5 nor 2. are valid floating point literals, but 0.5 and 2.0 are.
+(In Ruby, integer literals are objects that can have methods apply to them, so requiring a digit after a decimal point helps to clarify whether 1.e5 should be parsed analogously to 1.to_f or as the exponential-format floating literal 1.0e5. The reason for requiring a digit before the decimal point is less clear; it might relate either to method invocation again, or perhaps to the .. and ... operators, for example in the fragment 0.1...3.)
+Boolean non-boolean datatypes are permitted in boolean contexts (unlike in e.g. Smalltalk and Java), but their mapping to boolean values differs markedly from some other languages: 0 and "empty" (e.g. empty list, string or associative array) all evaluate to true, thus changing the meaning of some common idioms in related or similar languages such as Lisp, Perl and Python.
+A consequence of this rule is that Ruby methods by convention — for example, regular-expression searches — return numbers, strings, lists, or other non-false values on success, but nil on failure.
+Versions prior to 1.9 use plain integers to represent single characters, much like C. This may cause surprises when slicing strings: "abc"[0] yields 97 (the ASCII code of the first character in the string); to obtain "a" use "abc"[0,1] (a substring of length 1) or "abc"[0].chr.
+The notation statement until expression does not run the statement if the expression is already true. (The behavior is like Perl, but unlike other languages' equivalent statements, e.g. do { statement } while (!(expression)); in C/C++/...). This is because statement until expression is actually syntactic sugar over until expression; statement; end, the equivalent of which in C/C++ is while (!(expression)) { statement; }, just as statement if expression is equivalent to if (expression) { statement; }. However, the notation begin statement end until expression in Ruby will in fact run the statement once even if the expression is already true, acting similar to the do-while of other languages. (Matsumoto has expressed a desire to remove the special behavior of begin statement end until expression,[42] but it still exists as of Ruby 2.0.)
+Because constants are references to objects, changing what a constant refers to generates a warning, but modifying the object itself does not. For example, Greeting << " world!" if Greeting == "Hello" does not generate an error or warning. This is similar to final variables in Java or a const pointer to a non-const object in C++, but Ruby provides the functionality to "freeze" an object, unlike Java.
+Some features which differ notably from other languages:
+The usual operators for conditional expressions, and and or, do not follow the normal rules of precedence: and does not bind tighter than or. Ruby also has expression operators || and && that work as expected.
+A list of so-called gotchas may be found in Hal Fulton's book The Ruby Way, 2nd ed (ISBN 0-672-32884-4), Section 1.5. A similar list in the 1st edition pertained to an older version of Ruby (version 1.6), some problems of which have been fixed in the meantime. For example, retry now works with while, until, and for, as well as with iterators.
+Interaction[edit]
+
+See also: Interactive Ruby Shell
+The Ruby official distribution also includes irb, an interactive command-line interpreter which can be used to test code quickly. The following code fragment represents a sample session using irb:
+$ irb
+irb(main):001:0> puts "Hello, World"
+Hello, World
+ => nil
+irb(main):002:0> 1+2
+ => 3
+Examples[edit]
+
+The following examples can be run in a Ruby shell such as Interactive Ruby Shell, or saved in a file and run from the command line by typing ruby <filename>.
+Classic Hello world example:
+puts "Hello World!"
+Some basic Ruby code:
+# Everything, including a literal, is an object, so this works:
+-199.abs                                                 # => 199
+"ice is nice".length                                     # => 11
+"ruby is cool.".index("u")                               # => 1
+"Nice Day Isn't It?".downcase.split("").uniq.sort.join   # => " '?acdeinsty"
+Conversions:
+puts "Give me a number"
+number = gets.chomp
+puts number.to_i
+output_number = number.to_i + 1
+puts output_number.to_s + ' is a bigger number.'
+Strings[edit]
+There are a variety of ways to define strings in Ruby.
+The following assignments are equivalent and support variable interpolation:
+a = "\nThis is a double-quoted string\n"
+a = %Q{\nThis is a double-quoted string\n}
+a = %{\nThis is a double-quoted string\n}
+a = %/\nThis is a double-quoted string\n/
+a = <<-BLOCK
+
+This is a double-quoted string
+BLOCK
+The following assignments are equivalent and produce raw strings:
+a = 'This is a single-quoted string'
+a = %q{This is a single-quoted string}
+Collections[edit]
+Constructing and using an array:
+a = [1, 'hi', 3.14, 1, 2, [4, 5]]
+
+a[2]             # => 3.14
+a.[](2)          # => 3.14
+a.reverse        # => [[4, 5], 2, 1, 3.14, 'hi', 1]
+a.flatten.uniq   # => [1, 'hi', 3.14, 2, 4, 5]
+Constructing and using an associative array (in Ruby, called a hash):
+hash = Hash.new # equivalent to hash = {}
+hash = { :water => 'wet', :fire => 'hot' } # makes the previous line redundant as we are now
+                                           # assigning hash to a new, separate hash object
+puts hash[:fire] # prints "hot"
+
+hash.each_pair do |key, value|   # or: hash.each do |key, value|
+  puts "#{key} is #{value}"
+end
+# returns {:water=>"wet", :fire=>"hot"} and prints:
+# water is wet
+# fire is hot
+
+hash.delete :water                            # deletes the pair :water => 'wet' and returns "wet"
+hash.delete_if {|key,value| value == 'hot'}   # deletes the pair :fire => 'hot' and returns {}
+Blocks and iterators[edit]
+The two syntaxes for creating a code block:
+{ puts "Hello, World!" } # note the braces
+# or:
+do
+  puts "Hello, World!"
+end
+A code block can be passed to a method as an optional block argument. Many built-in methods have such arguments:
+File.open('file.txt', 'w') do |file| # 'w' denotes "write mode"
+  file.puts 'Wrote some text.'
+end                                  # file is automatically closed here
+
+File.readlines('file.txt').each do |line|
+  puts line
+end
+# => Wrote some text.
+Parameter-passing a block to be a closure:
+# In an object instance variable (denoted with '@'), remember a block.
+def remember(&a_block)
+  @block = a_block
+end
+
+# Invoke the preceding method, giving it a block which takes a name.
+remember {|name| puts "Hello, #{name}!"}
+
+# Call the closure:
+@block.call("Jon")   # => "Hello, Jon!"
+Creating an anonymous function:
+proc {|arg| puts arg}
+Proc.new {|arg| puts arg}
+lambda {|arg| puts arg}
+->(arg) {puts arg}         # introduced in Ruby 1.9
+Returning closures from a method:
+def create_set_and_get(initial_value=0) # note the default value of 0
+  closure_value = initial_value
+  return Proc.new {|x| closure_value = x}, Proc.new { closure_value }
+end
+
+setter, getter = create_set_and_get  # returns two values
+setter.call(21)
+getter.call      # => 21
+
+# Parameter variables can also be used as a binding for the closure,
+# so the preceding can be rewritten as:
+
+def create_set_and_get(closure_value=0)
+  return proc {|x| closure_value = x } , proc { closure_value }
+end
+Yielding the flow of program control to a block which was provided at calling time:
+def use_hello
+  yield "hello"
+end
+
+# Invoke the preceding method, passing it a block.
+use_hello {|string| puts string}  # => 'hello'
+Iterating over enumerations and arrays using blocks:
+array = [1, 'hi', 3.14]
+array.each {|item| puts item }
+# prints:
+# 1
+# 'hi'
+# 3.14
+
+array.each_index {|index| puts "#{index}: #{array[index]}" }
+# prints:
+# 0: 1
+# 1: 'hi'
+# 2: 3.14
+
+# The following uses a Range
+(3..6).each {|num| puts num }
+# prints:
+# 3
+# 4
+# 5
+# 6
+A method such as inject can accept both a parameter and a block. The inject method iterates over each member of a list, performing some function on it while retaining an aggregate. This is analogous to the foldl function in functional programming languages. For example:
+[1,3,5].inject(10) {|sum, element| sum + element}   # => 19
+On the first pass, the block receives 10 (the argument to inject) as sum, and 1 (the first element of the array) as element. This returns 11, which then becomes sum on the next pass. It is added to 3 to get 14, which is then added to 5 on the third pass, to finally return 19.
+Using an enumeration and a block to square the numbers 1 to 10 (using a range):
+(1..10).collect {|x| x*x}  # => [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Or invoke a method on each item (map is a synonym for collect):
+(1..5).map(&:to_f)  # => [1.0, 2.0, 3.0, 4.0, 5.0]
+Classes[edit]
+The following code defines a class named Person. In addition to initialize, the usual constructor to create new objects, it has two methods: one to override the <=> comparison operator (so Array#sort can sort by age) and the other to override the to_s method (so Kernel#puts can format its output). Here, attr_reader is an example of metaprogramming in Ruby: attr_accessor defines getter and setter methods of instance variables, but attr_reader only getter methods. The last evaluated statement in a method is its return value, allowing the omission of an explicit return statement.
+class Person
+  attr_reader :name, :age
+  def initialize(name, age)
+    @name, @age = name, age
+  end
+  def <=>(person) # the comparison operator for sorting
+    age <=> person.age
+  end
+  def to_s
+    "#{name} (#{age})"
+  end
+end
+
+group = [
+  Person.new("Bob", 33),
+  Person.new("Chris", 16),
+  Person.new("Ash", 23)
+]
+
+puts group.sort.reverse
+The preceding code prints three names in reverse age order:
+Bob (33)
+Ash (23)
+Chris (16)
+Person is a constant and is a reference to a Class object.
+Open classes[edit]
+In Ruby, classes are never closed: methods can always be added to an existing class. This applies to all classes, including the standard, built-in classes. All that is needed to do is open up a class definition for an existing class, and the new contents specified will be added to the existing contents. A simple example of adding a new method to the standard library's Time class:
+# re-open Ruby's Time class
+class Time
+  def yesterday
+    self - 86400
+  end
+end
+
+today = Time.now               # => 2013-09-03 16:09:37 +0300
+yesterday = today.yesterday    # => 2013-09-02 16:09:37 +0300
+Adding methods to previously defined classes is often called monkey-patching. However, if performed recklessly, this practice can lead to collisions of behavior and subsequent unexpected results, and problems with code scalability.
+Exceptions[edit]
+An exception is raised with a raise call:
+raise
+An optional message can be added to the exception:
+raise "This is a message"
+Exceptions can also be specified by the programmer:
+raise ArgumentError, "Illegal arguments!"
+Alternatively, an exception instance can be passed to the raise method:
+raise ArgumentError.new("Illegal arguments!")
+This last construct is useful when a custom exception class featuring a constructor which takes more than one argument needs to be raised:
+class ParseError < Exception
+  def initialize input, line, pos
+    super "Could not parse '#{input}' at line #{line}, position #{pos}"
+  end
+end
+
+raise ParseError.new("Foo", 3, 9)
+Exceptions are handled by the rescue clause. Such a clause can catch exceptions which inherit from StandardError. Other flow control keywords that can be used when handling exceptions are else and ensure:
+begin
+  # do something
+rescue
+  # handle exception
+else
+  # do this if no exception was raised
+ensure
+  # do this whether or not an exception was raised
+end
+It is a common mistake to attempt to catch all exceptions with a simple rescue clause. To catch all exceptions one must write:
+begin
+  # do something
+rescue Exception
+  # Exception handling code here.
+  # Don't write only "rescue"; that only catches StandardError, a subclass of Exception.
+end
+Or catch particular exceptions:
+begin
+  # do something
+rescue RuntimeError
+  # handle only RuntimeError and its subclasses
+end
+It is also possible to specify that the exception object be made available to the handler clause:
+begin
+  # do something
+rescue RuntimeError => e
+  # handling, possibly involving e, such as "puts e.to_s"
+end
+Alternatively, the most recent exception is stored in the magic global $!.
+Several exceptions can also be caught:
+begin
+  # do something
+rescue RuntimeError, Timeout::Error => e
+  # handling, possibly involving e
+end
+Metaprogramming[edit]
+Ruby code can programmatically modify, at runtime, aspects of its own structure that would be fixed in more rigid languages, such as class and method definitions. This sort of metaprogramming can be used to write more concise code and effectively extend the language.
+For example, the following Ruby code generates new methods for the built-in String class, based on a list of colors. The methods wrap the contents of the string with an HTML tag styled with the respective color.
+COLORS = { black:   "000",
+           red:     "f00",
+           green:   "0f0",
+           yellow:  "ff0",
+           blue:    "00f",
+           magenta: "f0f",
+           cyan:    "0ff",
+           white:   "fff" }
+
+class String
+  COLORS.each do |color,code|
+    define_method "in_#{color}" do
+      "<span style=\"color: ##{code}\">#{self}</span>"
+    end
+  end
+end
+The generated methods could then be used like this:
+"Hello, World!".in_blue
+ => "<span style=\"color: #00f\">Hello, World!</span>"
+To implement the equivalent in many other languages, the programmer would have to write each method (in_black, in_red, in_green, etc.) separately.
+Some other possible uses for Ruby metaprogramming include:
+intercepting and modifying method calls
+implementing new inheritance models
+dynamically generating classes from parameters
+automatic object serialization
+interactive help and debugging
+More examples[edit]
+More sample Ruby code is available as algorithms in the following articles:
+Exponentiating by squaring
+Trabb Pardo-Knuth algorithm
+Implementations[edit]
+
+See also: Ruby MRI#Operating systems
+Ruby 1.9 has multiple implementations:
+The official Ruby interpreter often referred to as the Matz's Ruby Interpreter or MRI. This implementation is written in C and uses its own Ruby-specific virtual machine,
+JRuby, a Java implementation that runs on the Java virtual machine,
+Rubinius, a C++ bytecode virtual machine that uses LLVM to compile to machine code at runtime. The bytecode compiler and most core classes are written in pure Ruby.
+Other Ruby implementations:
+MagLev (software), a Smalltalk implementation on VMware’s GemStone VM
+MacRuby, an OS X implementation on the Objective-C runtime
+Cardinal, an implementation for the Parrot virtual machine
+IronRuby, an implementation on the .NET Framework
+The maturity of Ruby implementations tends to be measured by their ability to run the Ruby on Rails (Rails) framework, because it is complex to implement and uses many Ruby-specific features. The point when a particular implementation achieves this goal is called "the Rails singularity". The reference implementation (MRI), JRuby, and Rubinius[43] are all able to run Rails unmodified in a production environment. IronRuby[44][45] is starting to be able to run Rails test cases, but is still far from being production-ready.
+Ruby is available on many operating systems, such as Linux, Mac OS X, Microsoft Windows, Windows Phone,[46] Windows CE and most flavors of Unix.
+Ruby 1.9 has recently been ported onto Symbian OS 9.x.[47]
+Ruby can also run on embedded system by mruby, developing in GitHub.
+Repositories and libraries[edit]
+
+RubyGems is Ruby's package manager. A Ruby package is called a "gem" and can easily be installed via the command line. There are over 60,000 Ruby gems hosted on RubyGems.org.
+Many new and existing Ruby libraries are hosted on GitHub, a service that offers version control repository hosting for Git.
+See also[edit]
+
+Portal icon	Free software portal
+Portal icon	Computer programming portal
+Comparison of programming languages
+Ruby MRI, the reference C implementation
+JRuby
+MacRuby
+IronRuby
+Rubinius
+MagLev
+XRuby
+Ruby on Rails
+Why's (poignant) Guide to Ruby — an online ruby textbook in graphic novel format
+Metasploit Project — the world's largest Ruby project, with over 700,000 lines of code
