@@ -29,14 +29,18 @@ Or install it yourself as:
 
 ## Usage
 
-Command line:  tcomp [<key>] path
-    <key> - determine supported type of compression:
-        z - use Zip
-        g - use GZip
-        r - use RAR
-        7 - use 7z
+Command line:
+
+    tcomp [<key>] path
+    
+    <key> - determines supported type of compression:
+      z - use Zip
+      g - use GZip (can't compress folder, only file)
+      r - use RAR
+      7 - use 7z
 
 Examples:
+
     tcomp z '/home/alex/The Lord of the Rings.txt'  # creates '/home/alex/The Lord of the Rings.txt.zip'
     tcomp /home/alex/Hobbit.txt.7z                  # creates /home/alex/Hobbit.txt
 
