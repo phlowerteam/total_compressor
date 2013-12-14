@@ -70,8 +70,8 @@ module TotalCompressor
   end
 end
 
-load 'lib/total_compressor/compressors/base_compressor.rb'
-load 'lib/total_compressor/compressors/t_zip.rb'
-load 'lib/total_compressor/compressors/t_gzip.rb'
-load 'lib/total_compressor/compressors/t_rar.rb'
-load 'lib/total_compressor/compressors/t_7z.rb'
+require 'total_compressor/compressors/base_compressor'
+require 'total_compressor/compressors/t_zip'
+require 'total_compressor/compressors/t_gzip'
+require 'total_compressor/compressors/t_rar'
+require 'total_compressor/compressors/t_7z'
