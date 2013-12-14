@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TotalCompressor::VERSION
   spec.authors       = ["PhlowerTeam"]
   spec.email         = ["phlowerteam@gmail.com"]
-  spec.description   = %q{Wrapper for handling multiple type of archives}
-  spec.summary       = %q{Supports zip, gzip, rar, 7z archive types}
+  spec.description   = %q{Tool (wrapper) for compression and handling multiple type of archives (Zip, GZip, RAR, 7z)}
+  spec.summary       = %q{Uses system calls}
   spec.homepage      = "https://github.com/phlowerteam"
   spec.license       = "MIT"
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    total_compressor (0.0.1)
+    total_compressor (0.1.6)
       awesome_print
       rubyzip (~> 0.9.9)
 

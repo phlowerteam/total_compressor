@@ -24,21 +24,21 @@ module TotalCompressor
         'tool'            => 'zip',
         'compress_file'   => '-9',
         'compress_folder' => '-9r',
-        'success_message' => 'deflated'
+        'success_message' => /(deflated|stored)/
       },
       'rar' => {
         'tool'            => 'rar',
         'compress_file'   => 'a',
         'compress_folder' => 'a',
         'decompress'      => 'x',
-        'success_message' => 'Done'
+        'success_message' => /Done/
         },
       '7z' => {
         'tool'            => '7z',
         'compress_file'   => 'a',
         'compress_folder' => 'a',
         'decompress'      => 'x',
-        'success_message' => 'Everything is Ok'
+        'success_message' => /Everything is Ok/
       },
       'gzip' => {}
     }
@@ -134,7 +134,7 @@ module TotalCompressor
           else
             %x[#{TYPE[format]['tool']} #{TYPE[format]['compress_file']} #{archive} #{file}]
           end
-          if message && message.match(/#{TYPE[format]['success_message']}/)
+          if message && message.match(TYPE[format]['success_message'])
             result[:success] = true
             result[:file] = "#{folder}/#{archive}"
           else

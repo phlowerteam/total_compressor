@@ -1,19 +1,15 @@
 total_compressor
 ================
 
-Tool (wrapper) for compression and handling multiple type of archives.
+Tool (wrapper) for compression and handling multiple type of archives (Zip, GZip, RAR, 7z).
 
-Supports next archive types:
-   - Zip;
-   - GZip;
-   - RAR;
-   - 7z.
+Uses system calls
 
 ## Installation
 
 Install appropriate tools before using:
 
-    apt-get install zlib1g zlib1g-dev zip rar p7zip
+    apt-get install zlib1g zlib1g-dev zip rar p7zip-full
 
 Add this line to your application's Gemfile:
 
@@ -31,7 +27,7 @@ Or install it yourself as:
 
 Command line:
 
-    tcomp [<key>] path
+    tcomp [<key>] full_path
     
     <key> - determines supported type of compression:
       z - use Zip

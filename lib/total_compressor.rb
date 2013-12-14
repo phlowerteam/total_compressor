@@ -52,10 +52,10 @@ module TotalCompressor
 
     def show_help
       puts %Q{
-      Total Compressor, v0.1, 2013, MIT License, https://github.com/phlowerteam
-      Tool (wrapper) for compression and handling multiple type of archives.
+      Total Compressor, v#{TotalCompressor::VERSION}, 2013, MIT License, https://github.com/phlowerteam
+      Tool (wrapper) for compression and handling multiple type of archives (Zip, GZip, RAR, 7z).
 
-      Usage: tcomp [<key>] path
+      Usage: tcomp [<key>] full_path
         <key> - determines supported type of compression:
           z - use Zip
           g - use GZip (can't compress folder, only file)
