@@ -23,7 +23,7 @@ module TotalCompressor
           }
         end
       rescue
-        result[:error] = 'exception'
+        result[:error] = TotalCompressor::BaseCompressor::MSG[:exception]
       ensure
         back_to_last_dir
       end
@@ -46,7 +46,7 @@ module TotalCompressor
           }
         end
       rescue
-        result[:error] = 'exception'
+        result[:error] = TotalCompressor::BaseCompressor::MSG[:exception]
       ensure
         back_to_last_dir
       end
