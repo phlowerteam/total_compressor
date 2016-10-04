@@ -1,3 +1,5 @@
+[![Coverity Scan Build Status](https://scan.coverity.com/projects/10368/badge.svg)](https://scan.coverity.com/projects/phlowerteam-total_compressor)
+
 total_compressor
 ================
 
