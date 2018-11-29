@@ -16,7 +16,7 @@ module TotalCompressor
       }
       begin
         folder = get_folder(path)
-        Zip::ZipFile.open(path) do |zip_file|
+        Zip::File.open(path) do |zip_file|
           dir = zip_file
           dir.entries.each do |file|
             zip_file.extract(file, "#{folder}/#{file}")

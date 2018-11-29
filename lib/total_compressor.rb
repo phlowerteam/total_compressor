@@ -1,5 +1,5 @@
 require 'total_compressor/version'
-require 'zip/zip'
+require 'zip'
 require 'awesome_print'
 
 module TotalCompressor

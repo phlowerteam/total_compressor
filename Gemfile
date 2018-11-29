@@ -4,5 +4,5 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'awesome_print'
-gem 'rubyzip',  "~> 0.9.9"
+gem 'rubyzip',  '>= 1.2.2'
 gem 'rspec' , '>= 2.14'
