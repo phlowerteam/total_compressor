@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    total_compressor (0.1.6)
+    total_compressor (0.1.7)
       awesome_print (~> 1.1, >= 1.1.0)
       rubyzip (~> 1.2, >= 1.2.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    awesome_print (1.1.0)
+    awesome_print (1.8.0)
     diff-lcs (1.2.5)
     rake (0.9.6)
     rspec (2.14.1)
